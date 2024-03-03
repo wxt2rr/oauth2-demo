@@ -8,15 +8,26 @@
 		<version>2.1.1.RELEASE</version>
 		<relativePath/> <!-- lookup parent from repository -->
 	</parent>
+
 	<groupId>com.wangxt</groupId>
 	<artifactId>oauth2-demo</artifactId>
-	<version>0.0.1-SNAPSHOT</version>
 	<name>oauth2-demo</name>
+
+	<packaging>pom</packaging>
+
 	<description>Demo project for oauth2</description>
+	<version>0.0.1-SNAPSHOT</version>
 
 	<properties>
 		<java.version>8</java.version>
 	</properties>
+
+	<modules>
+		<module>auth-server</module>
+		<module>oauth-demo</module>
+		<module>user-server</module>
+		<module>vip-server</module>
+	</modules>
 
 	<dependencies>
 		<dependency>
@@ -52,15 +63,18 @@
 			<groupId>org.projectlombok</groupId>
 			<artifactId>lombok</artifactId>
 		</dependency>
-	</dependencies>
 
-	<build>
-		<plugins>
-			<plugin>
-				<groupId>org.springframework.boot</groupId>
-				<artifactId>spring-boot-maven-plugin</artifactId>
-			</plugin>
-		</plugins>
-	</build>
+		<dependency>
+			<groupId>org.apache.commons</groupId>
+			<artifactId>commons-lang3</artifactId>
+			<version>3.9</version>
+		</dependency>
+
+		<dependency>
+			<groupId>com.google.guava</groupId>
+			<artifactId>guava</artifactId>
+			<version>30.1-jre</version>
+		</dependency>
+	</dependencies>
 
 </project>
